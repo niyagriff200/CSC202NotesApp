@@ -14,7 +14,7 @@ namespace CSC202NotesApp
             string sWord2 = txt_word2.Text;
 
             //Adding word 1 to word 2
-            string wordResult = sWord1 + sWord2; //Another way: string result = txt_word1 + txt_word2;
+            string wordResult = sWord1 + sWord2; //Another way: string result = txt_word1.Text + txt_word2.Text;
 
             //Displaying the results
             lb_wordResult.Text = wordResult;
@@ -39,6 +39,7 @@ namespace CSC202NotesApp
             else
             {
                 int quotientResult = iNum1 / iNum2;
+
                 //If quotientResult divide by 2 and the remainder is 0, the number is even; Else, the number is odd
                 if (quotientResult % 2 == 0)
                 {
