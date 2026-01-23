@@ -33,18 +33,27 @@
             lb_Week1Heading = new Label();
             rtb_Week1Notes = new RichTextBox();
             pn_Body = new Panel();
+            lb_wordResult = new Label();
+            txt_equalsSymbol = new TextBox();
+            txt_plusSymbol = new TextBox();
+            txt_word2 = new TextBox();
+            txt_word1 = new TextBox();
+            rtb_Week2Notes = new RichTextBox();
+            lb_Week2Heading = new Label();
             textBox1 = new TextBox();
             pictureBox2 = new PictureBox();
             rtb_PictureBoxNote = new RichTextBox();
             pictureBox1 = new PictureBox();
             btn_MistyOrchid = new Button();
-            richTextBox1 = new RichTextBox();
+            rtb_ButtonTextBox = new RichTextBox();
             btn_MidnightGhost = new Button();
             tb_buttons = new TextBox();
             tb_userTextbox = new TextBox();
             pn_Navigation = new Panel();
+            llb_Week2Nav = new LinkLabel();
             llb_Week1Nav = new LinkLabel();
             lb_NavTitle = new Label();
+            btn_Combine = new Button();
             pn_Body.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -91,12 +100,20 @@
             // 
             pn_Body.AutoScroll = true;
             pn_Body.BackColor = Color.FromArgb(247, 243, 238);
+            pn_Body.Controls.Add(btn_Combine);
+            pn_Body.Controls.Add(lb_wordResult);
+            pn_Body.Controls.Add(txt_equalsSymbol);
+            pn_Body.Controls.Add(txt_plusSymbol);
+            pn_Body.Controls.Add(txt_word2);
+            pn_Body.Controls.Add(txt_word1);
+            pn_Body.Controls.Add(rtb_Week2Notes);
+            pn_Body.Controls.Add(lb_Week2Heading);
             pn_Body.Controls.Add(textBox1);
             pn_Body.Controls.Add(pictureBox2);
             pn_Body.Controls.Add(rtb_PictureBoxNote);
             pn_Body.Controls.Add(pictureBox1);
             pn_Body.Controls.Add(btn_MistyOrchid);
-            pn_Body.Controls.Add(richTextBox1);
+            pn_Body.Controls.Add(rtb_ButtonTextBox);
             pn_Body.Controls.Add(btn_MidnightGhost);
             pn_Body.Controls.Add(tb_buttons);
             pn_Body.Controls.Add(tb_userTextbox);
@@ -107,6 +124,79 @@
             pn_Body.Name = "pn_Body";
             pn_Body.Size = new Size(1359, 1020);
             pn_Body.TabIndex = 3;
+            // 
+            // lb_wordResult
+            // 
+            lb_wordResult.AutoSize = true;
+            lb_wordResult.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lb_wordResult.Location = new Point(909, 1776);
+            lb_wordResult.Name = "lb_wordResult";
+            lb_wordResult.Size = new Size(0, 47);
+            lb_wordResult.TabIndex = 18;
+            // 
+            // txt_equalsSymbol
+            // 
+            txt_equalsSymbol.BackColor = Color.FromArgb(247, 243, 238);
+            txt_equalsSymbol.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txt_equalsSymbol.ForeColor = SystemColors.WindowText;
+            txt_equalsSymbol.Location = new Point(786, 1768);
+            txt_equalsSymbol.Name = "txt_equalsSymbol";
+            txt_equalsSymbol.ReadOnly = true;
+            txt_equalsSymbol.Size = new Size(85, 55);
+            txt_equalsSymbol.TabIndex = 17;
+            txt_equalsSymbol.Text = "=";
+            txt_equalsSymbol.TextAlign = HorizontalAlignment.Center;
+            // 
+            // txt_plusSymbol
+            // 
+            txt_plusSymbol.BackColor = Color.FromArgb(247, 243, 238);
+            txt_plusSymbol.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txt_plusSymbol.Location = new Point(414, 1767);
+            txt_plusSymbol.Name = "txt_plusSymbol";
+            txt_plusSymbol.ReadOnly = true;
+            txt_plusSymbol.Size = new Size(110, 55);
+            txt_plusSymbol.TabIndex = 16;
+            txt_plusSymbol.Text = "+";
+            txt_plusSymbol.TextAlign = HorizontalAlignment.Center;
+            // 
+            // txt_word2
+            // 
+            txt_word2.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txt_word2.Location = new Point(530, 1767);
+            txt_word2.Name = "txt_word2";
+            txt_word2.PlaceholderText = "txt_word2...";
+            txt_word2.Size = new Size(250, 55);
+            txt_word2.TabIndex = 15;
+            // 
+            // txt_word1
+            // 
+            txt_word1.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txt_word1.Location = new Point(158, 1767);
+            txt_word1.Name = "txt_word1";
+            txt_word1.PlaceholderText = "txt_word1...";
+            txt_word1.Size = new Size(250, 55);
+            txt_word1.TabIndex = 14;
+            // 
+            // rtb_Week2Notes
+            // 
+            rtb_Week2Notes.BackColor = Color.FromArgb(247, 243, 238);
+            rtb_Week2Notes.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            rtb_Week2Notes.Location = new Point(106, 1578);
+            rtb_Week2Notes.Name = "rtb_Week2Notes";
+            rtb_Week2Notes.Size = new Size(1156, 165);
+            rtb_Week2Notes.TabIndex = 13;
+            rtb_Week2Notes.Text = resources.GetString("rtb_Week2Notes.Text");
+            // 
+            // lb_Week2Heading
+            // 
+            lb_Week2Heading.AutoSize = true;
+            lb_Week2Heading.Font = new Font("Freestyle Script", 15.9000006F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lb_Week2Heading.ForeColor = Color.FromArgb(217, 122, 122);
+            lb_Week2Heading.Location = new Point(106, 1494);
+            lb_Week2Heading.Name = "lb_Week2Heading";
+            lb_Week2Heading.Size = new Size(145, 64);
+            lb_Week2Heading.TabIndex = 12;
+            lb_Week2Heading.Text = "Week 2";
             // 
             // textBox1
             // 
@@ -163,17 +253,17 @@
             btn_MistyOrchid.Text = "MistyOrchid";
             btn_MistyOrchid.UseVisualStyleBackColor = false;
             // 
-            // richTextBox1
+            // rtb_ButtonTextBox
             // 
-            richTextBox1.BackColor = Color.FromArgb(247, 243, 238);
-            richTextBox1.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            richTextBox1.ForeColor = Color.FromArgb(46, 46, 46);
-            richTextBox1.Location = new Point(106, 524);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.ReadOnly = true;
-            richTextBox1.Size = new Size(924, 147);
-            richTextBox1.TabIndex = 6;
-            richTextBox1.Text = "The button is named MidnightBlue because of the colors MidnightBlue and GhostWhite, which are the colors the button uses. Can you guess why I named that button MistyOrchid? ->";
+            rtb_ButtonTextBox.BackColor = Color.FromArgb(247, 243, 238);
+            rtb_ButtonTextBox.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            rtb_ButtonTextBox.ForeColor = Color.FromArgb(46, 46, 46);
+            rtb_ButtonTextBox.Location = new Point(106, 524);
+            rtb_ButtonTextBox.Name = "rtb_ButtonTextBox";
+            rtb_ButtonTextBox.ReadOnly = true;
+            rtb_ButtonTextBox.Size = new Size(924, 147);
+            rtb_ButtonTextBox.TabIndex = 6;
+            rtb_ButtonTextBox.Text = "The button is named MidnightBlue because of the colors MidnightBlue and GhostWhite, which are the colors the button uses. Can you guess why I named that button MistyOrchid? ->";
             // 
             // btn_MidnightGhost
             // 
@@ -210,12 +300,27 @@
             // pn_Navigation
             // 
             pn_Navigation.BackColor = Color.FromArgb(199, 184, 166);
+            pn_Navigation.Controls.Add(llb_Week2Nav);
             pn_Navigation.Controls.Add(llb_Week1Nav);
             pn_Navigation.Controls.Add(lb_NavTitle);
             pn_Navigation.Location = new Point(1, 4);
             pn_Navigation.Name = "pn_Navigation";
             pn_Navigation.Size = new Size(429, 1017);
             pn_Navigation.TabIndex = 4;
+            // 
+            // llb_Week2Nav
+            // 
+            llb_Week2Nav.ActiveLinkColor = Color.FromArgb(79, 111, 163);
+            llb_Week2Nav.AutoSize = true;
+            llb_Week2Nav.Font = new Font("Freestyle Script", 15.9000006F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            llb_Week2Nav.LinkColor = Color.FromArgb(106, 143, 191);
+            llb_Week2Nav.Location = new Point(64, 191);
+            llb_Week2Nav.Name = "llb_Week2Nav";
+            llb_Week2Nav.Size = new Size(145, 64);
+            llb_Week2Nav.TabIndex = 2;
+            llb_Week2Nav.TabStop = true;
+            llb_Week2Nav.Text = "Week 2";
+            llb_Week2Nav.VisitedLinkColor = Color.FromArgb(140, 127, 191);
             // 
             // llb_Week1Nav
             // 
@@ -244,11 +349,24 @@
             lb_NavTitle.TabIndex = 0;
             lb_NavTitle.Text = "Weeks";
             // 
+            // btn_Combine
+            // 
+            btn_Combine.BackColor = Color.LemonChiffon;
+            btn_Combine.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_Combine.ForeColor = Color.DarkGreen;
+            btn_Combine.Location = new Point(375, 1839);
+            btn_Combine.Name = "btn_Combine";
+            btn_Combine.Size = new Size(188, 58);
+            btn_Combine.TabIndex = 19;
+            btn_Combine.Text = "Combine";
+            btn_Combine.UseVisualStyleBackColor = false;
+            btn_Combine.Click += btn_Combine_Click;
+            // 
             // NotesApp
             // 
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1783, 1017);
+            ClientSize = new Size(1783, 1026);
             Controls.Add(pn_Navigation);
             Controls.Add(pn_Body);
             Name = "NotesApp";
@@ -275,10 +393,19 @@
         private TextBox tb_buttons;
         private Button btn_MidnightGhost;
         private Button btn_MistyOrchid;
-        private RichTextBox richTextBox1;
+        private RichTextBox rtb_ButtonTextBox;
         private PictureBox pictureBox1;
         private RichTextBox rtb_PictureBoxNote;
         private PictureBox pictureBox2;
         private TextBox textBox1;
+        private LinkLabel llb_Week2Nav;
+        private RichTextBox rtb_Week2Notes;
+        private Label lb_Week2Heading;
+        private TextBox txt_word2;
+        private TextBox txt_word1;
+        private Label lb_wordResult;
+        private TextBox txt_equalsSymbol;
+        private TextBox txt_plusSymbol;
+        private Button btn_Combine;
     }
 }

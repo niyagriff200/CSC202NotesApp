@@ -120,6 +120,9 @@
   <data name="rtb_Week1Notes.Text" xml:space="preserve">
     <value>In Week 1 of CSC202, I learned how to add GUI elements to Winforms. For instance, this block of text is inside of a Textbox, a RichTextbox to be specific. It's currently set to read-only. I'll place another one where read-only is set to false.</value>
   </data>
+  <data name="rtb_Week2Notes.Text" xml:space="preserve">
+    <value>In the 2nd week of CSC202 we learned about variables and conditionals. Let's start with the two textboxes below. One will be named txt_word1, the other will be named txt_word2. Go ahead and place a word in each box. Click the combine button when you've done that.</value>
+  </data>
   <data name="rtb_PictureBoxNote.Text" xml:space="preserve">
     <value>I added this picture of apples using the PictureBox. I set the size mode to Zoom so that it scales the image nicely. 
 
