@@ -82,5 +82,16 @@ namespace CSC202NotesApp
                 lb_numResult2.Text = $"{quotientResult}";
             }
         }
+
+        private void llb_Week1Nav_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void llb_Week2Nav_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
     }
 }

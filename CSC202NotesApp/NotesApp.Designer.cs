@@ -33,6 +33,13 @@
             lb_Week1Heading = new Label();
             rtb_Week1Notes = new RichTextBox();
             pn_Body = new Panel();
+            lb_evenOdd2 = new Label();
+            lb_numResult2 = new Label();
+            btn_Divide2 = new Button();
+            txt_equalsSymbol3 = new TextBox();
+            txt_divisionSymbol2 = new TextBox();
+            txt_num4 = new TextBox();
+            txt_num3 = new TextBox();
             rtb_Week2Notes3 = new RichTextBox();
             lb_evenOdd = new Label();
             btn_Divide = new Button();
@@ -63,13 +70,6 @@
             llb_Week2Nav = new LinkLabel();
             llb_Week1Nav = new LinkLabel();
             lb_NavTitle = new Label();
-            btn_Divide2 = new Button();
-            txt_equalsSymbol3 = new TextBox();
-            txt_divisionSymbol2 = new TextBox();
-            txt_num4 = new TextBox();
-            txt_num3 = new TextBox();
-            lb_numResult2 = new Label();
-            lb_evenOdd2 = new Label();
             pn_Body.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -155,6 +155,75 @@
             pn_Body.Name = "pn_Body";
             pn_Body.Size = new Size(1359, 1020);
             pn_Body.TabIndex = 3;
+            // 
+            // lb_evenOdd2
+            // 
+            lb_evenOdd2.AutoSize = true;
+            lb_evenOdd2.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lb_evenOdd2.Location = new Point(902, 2633);
+            lb_evenOdd2.Name = "lb_evenOdd2";
+            lb_evenOdd2.Size = new Size(0, 47);
+            lb_evenOdd2.TabIndex = 34;
+            // 
+            // lb_numResult2
+            // 
+            lb_numResult2.AutoSize = true;
+            lb_numResult2.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lb_numResult2.Location = new Point(900, 2572);
+            lb_numResult2.Name = "lb_numResult2";
+            lb_numResult2.Size = new Size(0, 47);
+            lb_numResult2.TabIndex = 33;
+            // 
+            // btn_Divide2
+            // 
+            btn_Divide2.BackColor = Color.SlateBlue;
+            btn_Divide2.ForeColor = Color.LavenderBlush;
+            btn_Divide2.Location = new Point(375, 2644);
+            btn_Divide2.Name = "btn_Divide2";
+            btn_Divide2.Size = new Size(188, 58);
+            btn_Divide2.TabIndex = 32;
+            btn_Divide2.Text = "Divide";
+            btn_Divide2.UseVisualStyleBackColor = false;
+            btn_Divide2.Click += btn_Divide2_Click;
+            // 
+            // txt_equalsSymbol3
+            // 
+            txt_equalsSymbol3.BackColor = Color.FromArgb(247, 243, 238);
+            txt_equalsSymbol3.Location = new Point(786, 2569);
+            txt_equalsSymbol3.Name = "txt_equalsSymbol3";
+            txt_equalsSymbol3.Size = new Size(85, 47);
+            txt_equalsSymbol3.TabIndex = 31;
+            txt_equalsSymbol3.Text = "=";
+            txt_equalsSymbol3.TextAlign = HorizontalAlignment.Center;
+            // 
+            // txt_divisionSymbol2
+            // 
+            txt_divisionSymbol2.BackColor = Color.FromArgb(247, 243, 238);
+            txt_divisionSymbol2.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txt_divisionSymbol2.Location = new Point(441, 2574);
+            txt_divisionSymbol2.Name = "txt_divisionSymbol2";
+            txt_divisionSymbol2.Size = new Size(44, 55);
+            txt_divisionSymbol2.TabIndex = 30;
+            txt_divisionSymbol2.Text = "/";
+            txt_divisionSymbol2.TextAlign = HorizontalAlignment.Center;
+            // 
+            // txt_num4
+            // 
+            txt_num4.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txt_num4.Location = new Point(530, 2565);
+            txt_num4.Name = "txt_num4";
+            txt_num4.PlaceholderText = "txt_num2...";
+            txt_num4.Size = new Size(250, 55);
+            txt_num4.TabIndex = 29;
+            // 
+            // txt_num3
+            // 
+            txt_num3.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txt_num3.Location = new Point(158, 2568);
+            txt_num3.Name = "txt_num3";
+            txt_num3.PlaceholderText = "txt_num1";
+            txt_num3.Size = new Size(250, 55);
+            txt_num3.TabIndex = 28;
             // 
             // rtb_Week2Notes3
             // 
@@ -316,10 +385,10 @@
             // 
             rtb_Week2Notes.BackColor = Color.FromArgb(247, 243, 238);
             rtb_Week2Notes.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            rtb_Week2Notes.Location = new Point(106, 1578);
+            rtb_Week2Notes.Location = new Point(106, 1545);
             rtb_Week2Notes.Name = "rtb_Week2Notes";
             rtb_Week2Notes.ReadOnly = true;
-            rtb_Week2Notes.Size = new Size(1156, 165);
+            rtb_Week2Notes.Size = new Size(1192, 198);
             rtb_Week2Notes.TabIndex = 13;
             rtb_Week2Notes.Text = resources.GetString("rtb_Week2Notes.Text");
             // 
@@ -328,7 +397,7 @@
             lb_Week2Heading.AutoSize = true;
             lb_Week2Heading.Font = new Font("Freestyle Script", 15.9000006F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lb_Week2Heading.ForeColor = Color.FromArgb(217, 122, 122);
-            lb_Week2Heading.Location = new Point(106, 1494);
+            lb_Week2Heading.Location = new Point(106, 1448);
             lb_Week2Heading.Name = "lb_Week2Heading";
             lb_Week2Heading.Size = new Size(145, 64);
             lb_Week2Heading.TabIndex = 12;
@@ -456,6 +525,7 @@
             llb_Week2Nav.TabStop = true;
             llb_Week2Nav.Text = "Week 2";
             llb_Week2Nav.VisitedLinkColor = Color.FromArgb(140, 127, 191);
+            llb_Week2Nav.LinkClicked += llb_Week2Nav_LinkClicked;
             // 
             // llb_Week1Nav
             // 
@@ -472,6 +542,7 @@
             llb_Week1Nav.TabStop = true;
             llb_Week1Nav.Text = "Week 1";
             llb_Week1Nav.VisitedLinkColor = Color.FromArgb(140, 127, 191);
+            llb_Week1Nav.LinkClicked += llb_Week1Nav_LinkClicked;
             // 
             // lb_NavTitle
             // 
@@ -483,75 +554,6 @@
             lb_NavTitle.Size = new Size(181, 95);
             lb_NavTitle.TabIndex = 0;
             lb_NavTitle.Text = "Weeks";
-            // 
-            // btn_Divide2
-            // 
-            btn_Divide2.BackColor = Color.SlateBlue;
-            btn_Divide2.ForeColor = Color.LavenderBlush;
-            btn_Divide2.Location = new Point(375, 2644);
-            btn_Divide2.Name = "btn_Divide2";
-            btn_Divide2.Size = new Size(188, 58);
-            btn_Divide2.TabIndex = 32;
-            btn_Divide2.Text = "Divide";
-            btn_Divide2.UseVisualStyleBackColor = false;
-            btn_Divide2.Click += btn_Divide2_Click;
-            // 
-            // txt_equalsSymbol3
-            // 
-            txt_equalsSymbol3.BackColor = Color.FromArgb(247, 243, 238);
-            txt_equalsSymbol3.Location = new Point(786, 2569);
-            txt_equalsSymbol3.Name = "txt_equalsSymbol3";
-            txt_equalsSymbol3.Size = new Size(85, 47);
-            txt_equalsSymbol3.TabIndex = 31;
-            txt_equalsSymbol3.Text = "=";
-            txt_equalsSymbol3.TextAlign = HorizontalAlignment.Center;
-            // 
-            // txt_divisionSymbol2
-            // 
-            txt_divisionSymbol2.BackColor = Color.FromArgb(247, 243, 238);
-            txt_divisionSymbol2.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txt_divisionSymbol2.Location = new Point(441, 2574);
-            txt_divisionSymbol2.Name = "txt_divisionSymbol2";
-            txt_divisionSymbol2.Size = new Size(44, 55);
-            txt_divisionSymbol2.TabIndex = 30;
-            txt_divisionSymbol2.Text = "/";
-            txt_divisionSymbol2.TextAlign = HorizontalAlignment.Center;
-            // 
-            // txt_num4
-            // 
-            txt_num4.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txt_num4.Location = new Point(530, 2565);
-            txt_num4.Name = "txt_num4";
-            txt_num4.PlaceholderText = "txt_num2...";
-            txt_num4.Size = new Size(250, 55);
-            txt_num4.TabIndex = 29;
-            // 
-            // txt_num3
-            // 
-            txt_num3.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txt_num3.Location = new Point(158, 2568);
-            txt_num3.Name = "txt_num3";
-            txt_num3.PlaceholderText = "txt_num1";
-            txt_num3.Size = new Size(250, 55);
-            txt_num3.TabIndex = 28;
-            // 
-            // lb_numResult2
-            // 
-            lb_numResult2.AutoSize = true;
-            lb_numResult2.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lb_numResult2.Location = new Point(900, 2572);
-            lb_numResult2.Name = "lb_numResult2";
-            lb_numResult2.Size = new Size(0, 47);
-            lb_numResult2.TabIndex = 33;
-            // 
-            // lb_evenOdd2
-            // 
-            lb_evenOdd2.AutoSize = true;
-            lb_evenOdd2.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lb_evenOdd2.Location = new Point(902, 2633);
-            lb_evenOdd2.Name = "lb_evenOdd2";
-            lb_evenOdd2.Size = new Size(0, 47);
-            lb_evenOdd2.TabIndex = 34;
             // 
             // NotesApp
             // 
