@@ -33,6 +33,16 @@
             lb_Week1Heading = new Label();
             rtb_Week1Notes = new RichTextBox();
             pn_Body = new Panel();
+            rtb_Week2Notes3 = new RichTextBox();
+            lb_evenOdd = new Label();
+            btn_Divide = new Button();
+            lb_numResult = new Label();
+            txt_equalsSymbol2 = new TextBox();
+            txt_divisionSymbol = new TextBox();
+            txt_num2 = new TextBox();
+            txt_num1 = new TextBox();
+            rtb_Week2Notes2 = new RichTextBox();
+            btn_Combine = new Button();
             lb_wordResult = new Label();
             txt_equalsSymbol = new TextBox();
             txt_plusSymbol = new TextBox();
@@ -53,7 +63,13 @@
             llb_Week2Nav = new LinkLabel();
             llb_Week1Nav = new LinkLabel();
             lb_NavTitle = new Label();
-            btn_Combine = new Button();
+            btn_Divide2 = new Button();
+            txt_equalsSymbol3 = new TextBox();
+            txt_divisionSymbol2 = new TextBox();
+            txt_num4 = new TextBox();
+            txt_num3 = new TextBox();
+            lb_numResult2 = new Label();
+            lb_evenOdd2 = new Label();
             pn_Body.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -82,7 +98,6 @@
             lb_Week1Heading.Size = new Size(145, 64);
             lb_Week1Heading.TabIndex = 1;
             lb_Week1Heading.Text = "Week 1";
-            lb_Week1Heading.Click += lb_Week1_Click;
             // 
             // rtb_Week1Notes
             // 
@@ -100,6 +115,22 @@
             // 
             pn_Body.AutoScroll = true;
             pn_Body.BackColor = Color.FromArgb(247, 243, 238);
+            pn_Body.Controls.Add(lb_evenOdd2);
+            pn_Body.Controls.Add(lb_numResult2);
+            pn_Body.Controls.Add(btn_Divide2);
+            pn_Body.Controls.Add(txt_equalsSymbol3);
+            pn_Body.Controls.Add(txt_divisionSymbol2);
+            pn_Body.Controls.Add(txt_num4);
+            pn_Body.Controls.Add(txt_num3);
+            pn_Body.Controls.Add(rtb_Week2Notes3);
+            pn_Body.Controls.Add(lb_evenOdd);
+            pn_Body.Controls.Add(btn_Divide);
+            pn_Body.Controls.Add(lb_numResult);
+            pn_Body.Controls.Add(txt_equalsSymbol2);
+            pn_Body.Controls.Add(txt_divisionSymbol);
+            pn_Body.Controls.Add(txt_num2);
+            pn_Body.Controls.Add(txt_num1);
+            pn_Body.Controls.Add(rtb_Week2Notes2);
             pn_Body.Controls.Add(btn_Combine);
             pn_Body.Controls.Add(lb_wordResult);
             pn_Body.Controls.Add(txt_equalsSymbol);
@@ -124,6 +155,110 @@
             pn_Body.Name = "pn_Body";
             pn_Body.Size = new Size(1359, 1020);
             pn_Body.TabIndex = 3;
+            // 
+            // rtb_Week2Notes3
+            // 
+            rtb_Week2Notes3.BackColor = Color.FromArgb(247, 243, 238);
+            rtb_Week2Notes3.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            rtb_Week2Notes3.Location = new Point(106, 2318);
+            rtb_Week2Notes3.Name = "rtb_Week2Notes3";
+            rtb_Week2Notes3.ReadOnly = true;
+            rtb_Week2Notes3.Size = new Size(1077, 209);
+            rtb_Week2Notes3.TabIndex = 27;
+            rtb_Week2Notes3.Text = resources.GetString("rtb_Week2Notes3.Text");
+            // 
+            // lb_evenOdd
+            // 
+            lb_evenOdd.AutoSize = true;
+            lb_evenOdd.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lb_evenOdd.Location = new Point(909, 2243);
+            lb_evenOdd.Name = "lb_evenOdd";
+            lb_evenOdd.Size = new Size(0, 47);
+            lb_evenOdd.TabIndex = 26;
+            // 
+            // btn_Divide
+            // 
+            btn_Divide.BackColor = Color.SlateBlue;
+            btn_Divide.ForeColor = Color.LavenderBlush;
+            btn_Divide.Location = new Point(375, 2243);
+            btn_Divide.Name = "btn_Divide";
+            btn_Divide.Size = new Size(188, 58);
+            btn_Divide.TabIndex = 25;
+            btn_Divide.Text = "Divide";
+            btn_Divide.UseVisualStyleBackColor = false;
+            btn_Divide.Click += btn_Divide_Click;
+            // 
+            // lb_numResult
+            // 
+            lb_numResult.AutoSize = true;
+            lb_numResult.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lb_numResult.Location = new Point(909, 2181);
+            lb_numResult.Name = "lb_numResult";
+            lb_numResult.Size = new Size(0, 47);
+            lb_numResult.TabIndex = 24;
+            // 
+            // txt_equalsSymbol2
+            // 
+            txt_equalsSymbol2.BackColor = Color.FromArgb(247, 243, 238);
+            txt_equalsSymbol2.Location = new Point(786, 2168);
+            txt_equalsSymbol2.Name = "txt_equalsSymbol2";
+            txt_equalsSymbol2.Size = new Size(85, 47);
+            txt_equalsSymbol2.TabIndex = 23;
+            txt_equalsSymbol2.Text = "=";
+            txt_equalsSymbol2.TextAlign = HorizontalAlignment.Center;
+            // 
+            // txt_divisionSymbol
+            // 
+            txt_divisionSymbol.BackColor = Color.FromArgb(247, 243, 238);
+            txt_divisionSymbol.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txt_divisionSymbol.Location = new Point(441, 2173);
+            txt_divisionSymbol.Name = "txt_divisionSymbol";
+            txt_divisionSymbol.Size = new Size(44, 55);
+            txt_divisionSymbol.TabIndex = 22;
+            txt_divisionSymbol.Text = "/";
+            txt_divisionSymbol.TextAlign = HorizontalAlignment.Center;
+            // 
+            // txt_num2
+            // 
+            txt_num2.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txt_num2.Location = new Point(530, 2164);
+            txt_num2.Name = "txt_num2";
+            txt_num2.PlaceholderText = "txt_num2...";
+            txt_num2.Size = new Size(250, 55);
+            txt_num2.TabIndex = 21;
+            // 
+            // txt_num1
+            // 
+            txt_num1.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txt_num1.Location = new Point(158, 2167);
+            txt_num1.Name = "txt_num1";
+            txt_num1.PlaceholderText = "txt_num1";
+            txt_num1.Size = new Size(250, 55);
+            txt_num1.TabIndex = 5;
+            // 
+            // rtb_Week2Notes2
+            // 
+            rtb_Week2Notes2.BackColor = Color.FromArgb(247, 243, 238);
+            rtb_Week2Notes2.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            rtb_Week2Notes2.Location = new Point(106, 1915);
+            rtb_Week2Notes2.Name = "rtb_Week2Notes2";
+            rtb_Week2Notes2.ReadOnly = true;
+            rtb_Week2Notes2.Size = new Size(1166, 221);
+            rtb_Week2Notes2.TabIndex = 20;
+            rtb_Week2Notes2.Text = resources.GetString("rtb_Week2Notes2.Text");
+            // 
+            // btn_Combine
+            // 
+            btn_Combine.BackColor = Color.LemonChiffon;
+            btn_Combine.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_Combine.ForeColor = Color.DarkGreen;
+            btn_Combine.Location = new Point(375, 1839);
+            btn_Combine.Name = "btn_Combine";
+            btn_Combine.Size = new Size(188, 58);
+            btn_Combine.TabIndex = 19;
+            btn_Combine.Text = "Combine";
+            btn_Combine.UseVisualStyleBackColor = false;
+            btn_Combine.Click += btn_Combine_Click;
             // 
             // lb_wordResult
             // 
@@ -183,6 +318,7 @@
             rtb_Week2Notes.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             rtb_Week2Notes.Location = new Point(106, 1578);
             rtb_Week2Notes.Name = "rtb_Week2Notes";
+            rtb_Week2Notes.ReadOnly = true;
             rtb_Week2Notes.Size = new Size(1156, 165);
             rtb_Week2Notes.TabIndex = 13;
             rtb_Week2Notes.Text = resources.GetString("rtb_Week2Notes.Text");
@@ -230,7 +366,6 @@
             rtb_PictureBoxNote.Size = new Size(536, 305);
             rtb_PictureBoxNote.TabIndex = 9;
             rtb_PictureBoxNote.Text = resources.GetString("rtb_PictureBoxNote.Text");
-            rtb_PictureBoxNote.TextChanged += rtb_PictureBoxNote_TextChanged;
             // 
             // pictureBox1
             // 
@@ -349,18 +484,74 @@
             lb_NavTitle.TabIndex = 0;
             lb_NavTitle.Text = "Weeks";
             // 
-            // btn_Combine
+            // btn_Divide2
             // 
-            btn_Combine.BackColor = Color.LemonChiffon;
-            btn_Combine.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_Combine.ForeColor = Color.DarkGreen;
-            btn_Combine.Location = new Point(375, 1839);
-            btn_Combine.Name = "btn_Combine";
-            btn_Combine.Size = new Size(188, 58);
-            btn_Combine.TabIndex = 19;
-            btn_Combine.Text = "Combine";
-            btn_Combine.UseVisualStyleBackColor = false;
-            btn_Combine.Click += btn_Combine_Click;
+            btn_Divide2.BackColor = Color.SlateBlue;
+            btn_Divide2.ForeColor = Color.LavenderBlush;
+            btn_Divide2.Location = new Point(375, 2644);
+            btn_Divide2.Name = "btn_Divide2";
+            btn_Divide2.Size = new Size(188, 58);
+            btn_Divide2.TabIndex = 32;
+            btn_Divide2.Text = "Divide";
+            btn_Divide2.UseVisualStyleBackColor = false;
+            btn_Divide2.Click += btn_Divide2_Click;
+            // 
+            // txt_equalsSymbol3
+            // 
+            txt_equalsSymbol3.BackColor = Color.FromArgb(247, 243, 238);
+            txt_equalsSymbol3.Location = new Point(786, 2569);
+            txt_equalsSymbol3.Name = "txt_equalsSymbol3";
+            txt_equalsSymbol3.Size = new Size(85, 47);
+            txt_equalsSymbol3.TabIndex = 31;
+            txt_equalsSymbol3.Text = "=";
+            txt_equalsSymbol3.TextAlign = HorizontalAlignment.Center;
+            // 
+            // txt_divisionSymbol2
+            // 
+            txt_divisionSymbol2.BackColor = Color.FromArgb(247, 243, 238);
+            txt_divisionSymbol2.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txt_divisionSymbol2.Location = new Point(441, 2574);
+            txt_divisionSymbol2.Name = "txt_divisionSymbol2";
+            txt_divisionSymbol2.Size = new Size(44, 55);
+            txt_divisionSymbol2.TabIndex = 30;
+            txt_divisionSymbol2.Text = "/";
+            txt_divisionSymbol2.TextAlign = HorizontalAlignment.Center;
+            // 
+            // txt_num4
+            // 
+            txt_num4.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txt_num4.Location = new Point(530, 2565);
+            txt_num4.Name = "txt_num4";
+            txt_num4.PlaceholderText = "txt_num2...";
+            txt_num4.Size = new Size(250, 55);
+            txt_num4.TabIndex = 29;
+            // 
+            // txt_num3
+            // 
+            txt_num3.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txt_num3.Location = new Point(158, 2568);
+            txt_num3.Name = "txt_num3";
+            txt_num3.PlaceholderText = "txt_num1";
+            txt_num3.Size = new Size(250, 55);
+            txt_num3.TabIndex = 28;
+            // 
+            // lb_numResult2
+            // 
+            lb_numResult2.AutoSize = true;
+            lb_numResult2.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lb_numResult2.Location = new Point(900, 2572);
+            lb_numResult2.Name = "lb_numResult2";
+            lb_numResult2.Size = new Size(0, 47);
+            lb_numResult2.TabIndex = 33;
+            // 
+            // lb_evenOdd2
+            // 
+            lb_evenOdd2.AutoSize = true;
+            lb_evenOdd2.Font = new Font("Freestyle Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lb_evenOdd2.Location = new Point(902, 2633);
+            lb_evenOdd2.Name = "lb_evenOdd2";
+            lb_evenOdd2.Size = new Size(0, 47);
+            lb_evenOdd2.TabIndex = 34;
             // 
             // NotesApp
             // 
@@ -407,5 +598,21 @@
         private TextBox txt_equalsSymbol;
         private TextBox txt_plusSymbol;
         private Button btn_Combine;
+        private RichTextBox rtb_Week2Notes2;
+        private TextBox txt_divisionSymbol;
+        private TextBox txt_num2;
+        private TextBox txt_num1;
+        private Label lb_numResult;
+        private TextBox txt_equalsSymbol2;
+        private Button btn_Divide;
+        private Label lb_evenOdd;
+        private RichTextBox rtb_Week2Notes3;
+        private Label lb_evenOdd2;
+        private Label lb_numResult2;
+        private Button btn_Divide2;
+        private TextBox txt_equalsSymbol3;
+        private TextBox txt_divisionSymbol2;
+        private TextBox txt_num4;
+        private TextBox txt_num3;
     }
 }

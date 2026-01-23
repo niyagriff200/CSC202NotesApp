@@ -120,6 +120,12 @@
   <data name="rtb_Week1Notes.Text" xml:space="preserve">
     <value>In Week 1 of CSC202, I learned how to add GUI elements to Winforms. For instance, this block of text is inside of a Textbox, a RichTextbox to be specific. It's currently set to read-only. I'll place another one where read-only is set to false.</value>
   </data>
+  <data name="rtb_Week2Notes3.Text" xml:space="preserve">
+    <value>You may have noticed that there are no decimal points can be used without it breaking. And that it only gives whole numbers. That's because I used integers, which can only cary whole numbers. In this last section. I will do doubles instead. This allows for more precision in what you're calculating.</value>
+  </data>
+  <data name="rtb_Week2Notes2.Text" xml:space="preserve">
+    <value>Cool, right? There's nothing there preventing you from inputting numbers with it, however, it doesn't quite work if you're trying to calculate the sum of the numbers. That's because I'm using strings for that portion. In the next portion you'll only be permitted to use number. Try dividing 2 numbers below. You won't be able to place words inside.</value>
+  </data>
   <data name="rtb_Week2Notes.Text" xml:space="preserve">
     <value>In the 2nd week of CSC202 we learned about variables and conditionals. Let's start with the two textboxes below. One will be named txt_word1, the other will be named txt_word2. Go ahead and place a word in each box. Click the combine button when you've done that.</value>
   </data>
