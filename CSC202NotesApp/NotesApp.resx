@@ -120,6 +120,9 @@
   <data name="rtb_Week1Notes.Text" xml:space="preserve">
     <value>In Week 1 of CSC202, I learned how to add GUI elements to Winforms. For instance, this block of text is inside of a Textbox, a RichTextbox to be specific. It's currently set to read-only. I'll place another one where read-only is set to false.</value>
   </data>
+  <data name="rtb_Week3Notes.Text" xml:space="preserve">
+    <value>This week in CSC202 we learned about functions. Below I will create a small crafting simulation. There will be two buttons, where you can add stone and wood into your "inventory". Then in a drop down menu you can see everything you're able to "craft". Select what you want to craft then, click the craft button.</value>
+  </data>
   <data name="rtb_Week2Notes3.Text" xml:space="preserve">
     <value>You may have noticed that there are no decimal points can be used without it breaking. And that it only gives whole numbers. That's because I used integers, which can only cary whole numbers. In this last section. I will do doubles instead. This allows for more precision in what you're calculating.</value>
   </data>

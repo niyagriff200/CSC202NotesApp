@@ -33,6 +33,15 @@
             lb_Week1Heading = new Label();
             rtb_Week1Notes = new RichTextBox();
             pn_Body = new Panel();
+            lb_CraftedItem = new Label();
+            btn_Craft = new Button();
+            lb_StoneAmount = new Label();
+            lb_WoodAmount = new Label();
+            cb_ItemType = new ComboBox();
+            btn_AddStone = new Button();
+            btn_AddWood = new Button();
+            rtb_Week3Notes = new RichTextBox();
+            lb_Week3Heading = new Label();
             lb_evenOdd2 = new Label();
             lb_numResult2 = new Label();
             btn_Divide2 = new Button();
@@ -67,6 +76,7 @@
             tb_buttons = new TextBox();
             tb_userTextbox = new TextBox();
             pn_Navigation = new Panel();
+            llb_Week3Nav = new LinkLabel();
             llb_Week2Nav = new LinkLabel();
             llb_Week1Nav = new LinkLabel();
             lb_NavTitle = new Label();
@@ -115,6 +125,15 @@
             // 
             pn_Body.AutoScroll = true;
             pn_Body.BackColor = Color.FromArgb(247, 243, 238);
+            pn_Body.Controls.Add(lb_CraftedItem);
+            pn_Body.Controls.Add(btn_Craft);
+            pn_Body.Controls.Add(lb_StoneAmount);
+            pn_Body.Controls.Add(lb_WoodAmount);
+            pn_Body.Controls.Add(cb_ItemType);
+            pn_Body.Controls.Add(btn_AddStone);
+            pn_Body.Controls.Add(btn_AddWood);
+            pn_Body.Controls.Add(rtb_Week3Notes);
+            pn_Body.Controls.Add(lb_Week3Heading);
             pn_Body.Controls.Add(lb_evenOdd2);
             pn_Body.Controls.Add(lb_numResult2);
             pn_Body.Controls.Add(btn_Divide2);
@@ -155,6 +174,102 @@
             pn_Body.Name = "pn_Body";
             pn_Body.Size = new Size(1359, 1020);
             pn_Body.TabIndex = 3;
+            // 
+            // lb_CraftedItem
+            // 
+            lb_CraftedItem.AutoSize = true;
+            lb_CraftedItem.Location = new Point(544, 3321);
+            lb_CraftedItem.Name = "lb_CraftedItem";
+            lb_CraftedItem.Size = new Size(97, 41);
+            lb_CraftedItem.TabIndex = 43;
+            lb_CraftedItem.Text = "label1";
+            // 
+            // btn_Craft
+            // 
+            btn_Craft.BackColor = Color.DarkTurquoise;
+            btn_Craft.ForeColor = Color.Snow;
+            btn_Craft.Location = new Point(909, 3179);
+            btn_Craft.Name = "btn_Craft";
+            btn_Craft.Size = new Size(188, 58);
+            btn_Craft.TabIndex = 42;
+            btn_Craft.Text = "Craft";
+            btn_Craft.UseVisualStyleBackColor = false;
+            btn_Craft.Click += btn_Craft_Click;
+            // 
+            // lb_StoneAmount
+            // 
+            lb_StoneAmount.AutoSize = true;
+            lb_StoneAmount.Font = new Font("Freestyle Script", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lb_StoneAmount.Location = new Point(337, 3237);
+            lb_StoneAmount.Name = "lb_StoneAmount";
+            lb_StoneAmount.Size = new Size(148, 47);
+            lb_StoneAmount.TabIndex = 41;
+            lb_StoneAmount.Text = " Amount: 0";
+            // 
+            // lb_WoodAmount
+            // 
+            lb_WoodAmount.AutoSize = true;
+            lb_WoodAmount.Font = new Font("Freestyle Script", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lb_WoodAmount.Location = new Point(333, 3157);
+            lb_WoodAmount.Name = "lb_WoodAmount";
+            lb_WoodAmount.Size = new Size(148, 47);
+            lb_WoodAmount.TabIndex = 40;
+            lb_WoodAmount.Text = " Amount: 0";
+            // 
+            // cb_ItemType
+            // 
+            cb_ItemType.FormattingEnabled = true;
+            cb_ItemType.Items.AddRange(new object[] { "Sticks", "Rock", "Spear", "Hammer", "Pickaxe", "Sword", "Furnace", "Planks" });
+            cb_ItemType.Location = new Point(544, 3188);
+            cb_ItemType.Name = "cb_ItemType";
+            cb_ItemType.Size = new Size(302, 49);
+            cb_ItemType.TabIndex = 39;
+            // 
+            // btn_AddStone
+            // 
+            btn_AddStone.BackColor = Color.Gray;
+            btn_AddStone.ForeColor = Color.WhiteSmoke;
+            btn_AddStone.Location = new Point(139, 3226);
+            btn_AddStone.Name = "btn_AddStone";
+            btn_AddStone.Size = new Size(188, 58);
+            btn_AddStone.TabIndex = 38;
+            btn_AddStone.Text = "Add Stone";
+            btn_AddStone.UseVisualStyleBackColor = false;
+            btn_AddStone.Click += btn_AddStone_Click;
+            // 
+            // btn_AddWood
+            // 
+            btn_AddWood.BackColor = Color.SaddleBrown;
+            btn_AddWood.ForeColor = Color.Ivory;
+            btn_AddWood.Location = new Point(139, 3151);
+            btn_AddWood.Name = "btn_AddWood";
+            btn_AddWood.Size = new Size(188, 58);
+            btn_AddWood.TabIndex = 37;
+            btn_AddWood.Text = "Add Wood";
+            btn_AddWood.UseVisualStyleBackColor = false;
+            btn_AddWood.Click += btn_AddWood_Click;
+            // 
+            // rtb_Week3Notes
+            // 
+            rtb_Week3Notes.BackColor = Color.FromArgb(247, 243, 238);
+            rtb_Week3Notes.Font = new Font("Freestyle Script", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            rtb_Week3Notes.Location = new Point(106, 2931);
+            rtb_Week3Notes.Name = "rtb_Week3Notes";
+            rtb_Week3Notes.ReadOnly = true;
+            rtb_Week3Notes.Size = new Size(1077, 199);
+            rtb_Week3Notes.TabIndex = 36;
+            rtb_Week3Notes.Text = resources.GetString("rtb_Week3Notes.Text");
+            // 
+            // lb_Week3Heading
+            // 
+            lb_Week3Heading.AutoSize = true;
+            lb_Week3Heading.Font = new Font("Freestyle Script", 15.9000006F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lb_Week3Heading.ForeColor = Color.FromArgb(217, 122, 122);
+            lb_Week3Heading.Location = new Point(106, 2834);
+            lb_Week3Heading.Name = "lb_Week3Heading";
+            lb_Week3Heading.Size = new Size(144, 64);
+            lb_Week3Heading.TabIndex = 35;
+            lb_Week3Heading.Text = "Week 3";
             // 
             // lb_evenOdd2
             // 
@@ -504,6 +619,7 @@
             // pn_Navigation
             // 
             pn_Navigation.BackColor = Color.FromArgb(199, 184, 166);
+            pn_Navigation.Controls.Add(llb_Week3Nav);
             pn_Navigation.Controls.Add(llb_Week2Nav);
             pn_Navigation.Controls.Add(llb_Week1Nav);
             pn_Navigation.Controls.Add(lb_NavTitle);
@@ -511,6 +627,19 @@
             pn_Navigation.Name = "pn_Navigation";
             pn_Navigation.Size = new Size(429, 1017);
             pn_Navigation.TabIndex = 4;
+            // 
+            // llb_Week3Nav
+            // 
+            llb_Week3Nav.ActiveLinkColor = Color.FromArgb(79, 111, 163);
+            llb_Week3Nav.AutoSize = true;
+            llb_Week3Nav.Font = new Font("Freestyle Script", 15.9000006F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            llb_Week3Nav.LinkColor = Color.FromArgb(106, 143, 191);
+            llb_Week3Nav.Location = new Point(65, 266);
+            llb_Week3Nav.Name = "llb_Week3Nav";
+            llb_Week3Nav.Size = new Size(144, 64);
+            llb_Week3Nav.TabIndex = 3;
+            llb_Week3Nav.TabStop = true;
+            llb_Week3Nav.Text = "Week 3";
             // 
             // llb_Week2Nav
             // 
@@ -525,7 +654,6 @@
             llb_Week2Nav.TabStop = true;
             llb_Week2Nav.Text = "Week 2";
             llb_Week2Nav.VisitedLinkColor = Color.FromArgb(140, 127, 191);
-            llb_Week2Nav.LinkClicked += llb_Week2Nav_LinkClicked;
             // 
             // llb_Week1Nav
             // 
@@ -542,7 +670,6 @@
             llb_Week1Nav.TabStop = true;
             llb_Week1Nav.Text = "Week 1";
             llb_Week1Nav.VisitedLinkColor = Color.FromArgb(140, 127, 191);
-            llb_Week1Nav.LinkClicked += llb_Week1Nav_LinkClicked;
             // 
             // lb_NavTitle
             // 
@@ -616,5 +743,15 @@
         private TextBox txt_divisionSymbol2;
         private TextBox txt_num4;
         private TextBox txt_num3;
+        private LinkLabel llb_Week3Nav;
+        private RichTextBox rtb_Week3Notes;
+        private Label lb_Week3Heading;
+        private Button btn_AddWood;
+        private Button btn_AddStone;
+        private ComboBox cb_ItemType;
+        private Button btn_Craft;
+        private Label lb_StoneAmount;
+        private Label lb_WoodAmount;
+        private Label lb_CraftedItem;
     }
 }
