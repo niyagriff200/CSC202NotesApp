@@ -144,8 +144,9 @@ namespace CSC202NotesApp
             int currentStone = int.Parse(lb_StoneAmount.Text.Replace("Amount: ", ""));
 
             //Convert ComboBox string to enumarator, to check ItemType (TODO: potentially set up a way to read the enumurator and place it in the ComboBox?, Warnings: CS8602(ln 147), CS8600(ln 147), CS8604(ln 148))
-            string selectedText = cb_ItemType.SelectedItem.ToString();
+            string selectedText = cb_ItemType.SelectedItem.ToString(); //TODO: IF statement not working anymore check why
             ItemType selectedItem = (ItemType)Enum.Parse(typeof(ItemType), selectedText); //find the enum value that matches the string in the ComboBox
+
 
             //Set up integers requiredWood and requiredStone; Get the required resources using the function RequiredResources set up integers requiredWood and requiredStone
             int requiredWood;

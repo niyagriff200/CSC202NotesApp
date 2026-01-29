@@ -178,11 +178,11 @@
             // lb_CraftedItem
             // 
             lb_CraftedItem.AutoSize = true;
+            lb_CraftedItem.Font = new Font("Freestyle Script", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             lb_CraftedItem.Location = new Point(544, 3321);
             lb_CraftedItem.Name = "lb_CraftedItem";
-            lb_CraftedItem.Size = new Size(97, 41);
+            lb_CraftedItem.Size = new Size(0, 47);
             lb_CraftedItem.TabIndex = 43;
-            lb_CraftedItem.Text = "label1";
             // 
             // btn_Craft
             // 
