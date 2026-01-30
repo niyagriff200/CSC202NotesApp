@@ -134,41 +134,43 @@ namespace CSC202NotesApp
         private void btn_Craft_Click(object sender, EventArgs e)
         {
             //Check if nothing is selected in the ComboBox (we can't craft anything if not)
-            if (cb_ItemType.SelectedItem == null)
+            if (cb_ItemType.SelectedItem != null)
+            {
+                //Read current amounts from the labels (lb_WoodAmount and lb_StoneAmount) and set up the integers currentWood and currentStone
+                int currentWood = int.Parse(lb_WoodAmount.Text.Replace("Amount: ", ""));
+                int currentStone = int.Parse(lb_StoneAmount.Text.Replace("Amount: ", ""));
+
+                //Convert ComboBox string to enumarator, to check ItemType (TODO: potentially set up a way to read the enumurator and place it in the ComboBox?, Warnings: CS8602(ln 147), CS8600(ln 147), CS8604(ln 148))
+                string selectedText = cb_ItemType.SelectedItem.ToString();
+                ItemType selectedItem = (ItemType)Enum.Parse(typeof(ItemType), selectedText); //find the enum value that matches the string in the ComboBox
+
+
+                //Set up integers requiredWood and requiredStone; Get the required resources using the function RequiredResources set up integers requiredWood and requiredStone
+                int requiredWood;
+                int requiredStone;
+                RequiredResources(selectedItem, out requiredWood, out requiredStone);
+
+                //Check to see if crafting is possible using CanBeCrafted (it's going to be either true or false)
+                bool canCraft = CanBeCrafted(currentWood, currentStone, requiredWood, requiredStone);
+
+                if (canCraft) //true
+                {
+                    currentWood -= requiredWood; //subtract the amount used (the amount of the requiredWood from the currentWood)
+                    currentStone -= requiredStone; //same thing, but for stone ^
+
+                    ShowAmount(currentWood, ResourceType.Wood); //Show the new amount in the labels for both wood and stone
+                    ShowAmount(currentStone, ResourceType.Stone);
+
+                    lb_CraftedItem.Text = $"{selectedItem} has been added to your inventory."; //Show the selected item had been added to inventory
+                }
+                else //false
+                {
+                    lb_CraftedItem.Text = $"You need {requiredWood} wood and {requiredStone} stone to craft this item."; //Else show the required amount of wood and stone needed to craft selected item
+                }
+            }
+            else
             {
                 lb_CraftedItem.Text = "Please select an item first.";
-            }
-
-            //Read current amounts from the labels (lb_WoodAmount and lb_StoneAmount) and set up the integers currentWood and currentStone
-            int currentWood = int.Parse(lb_WoodAmount.Text.Replace("Amount: ", ""));
-            int currentStone = int.Parse(lb_StoneAmount.Text.Replace("Amount: ", ""));
-
-            //Convert ComboBox string to enumarator, to check ItemType (TODO: potentially set up a way to read the enumurator and place it in the ComboBox?, Warnings: CS8602(ln 147), CS8600(ln 147), CS8604(ln 148))
-            string selectedText = cb_ItemType.SelectedItem.ToString(); //TODO: IF statement not working anymore check why
-            ItemType selectedItem = (ItemType)Enum.Parse(typeof(ItemType), selectedText); //find the enum value that matches the string in the ComboBox
-
-
-            //Set up integers requiredWood and requiredStone; Get the required resources using the function RequiredResources set up integers requiredWood and requiredStone
-            int requiredWood;
-            int requiredStone;
-            RequiredResources(selectedItem, out requiredWood, out requiredStone);
-
-            //Check to see if crafting is possible using CanBeCrafted (it's going to be either true or false)
-            bool canCraft = CanBeCrafted(currentWood, currentStone, requiredWood, requiredStone);
-
-            if (canCraft) //true
-            {
-                currentWood -= requiredWood; //subtract the amount used (the amount of the requiredWood from the currentWood)
-                currentStone -= requiredStone; //same thing, but for stone ^
-
-                ShowAmount(currentWood, ResourceType.Wood); //Show the new amount in the labels for both wood and stone
-                ShowAmount(currentStone, ResourceType.Stone);
-
-                lb_CraftedItem.Text = $"{selectedItem} has been added to your inventory."; //Show the selected item had been added to inventory
-            }
-            else //false
-            {
-                lb_CraftedItem.Text = $"You need {requiredWood} wood and {requiredStone} stone to craft this item."; //Else show the required amount of wood and stone needed to craft selected item
             }
         }
 
