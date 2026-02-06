@@ -2,7 +2,7 @@ namespace CSC202NotesApp
 {
     public partial class NotesApp : Form
     {
-        
+
         private enum ResourceType
         {
             //TODO: Maybe add more resource types in the future
@@ -269,6 +269,17 @@ namespace CSC202NotesApp
             {
                 return false;
             }
+        }
+
+        private void btnWeek4Form_Click(object sender, EventArgs e)
+        {
+            //create an object of the form to open
+            Week4 week4 = new Week4(this);
+
+            //Open the week 4 form
+            week4.Show();
+
+            this.Hide();
         }
     }
 }

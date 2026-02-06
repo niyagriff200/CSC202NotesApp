@@ -33,6 +33,9 @@
             lb_Week1Heading = new Label();
             rtb_Week1Notes = new RichTextBox();
             pn_Body = new Panel();
+            btnWeek4Form = new Button();
+            rtb_Week4Notes = new RichTextBox();
+            lb_Week4Heading = new Label();
             lb_CraftedItem = new Label();
             btn_Craft = new Button();
             lb_StoneAmount = new Label();
@@ -76,6 +79,7 @@
             tb_buttons = new TextBox();
             tb_userTextbox = new TextBox();
             pn_Navigation = new Panel();
+            llb_Week4Nav = new LinkLabel();
             llb_Week3Nav = new LinkLabel();
             llb_Week2Nav = new LinkLabel();
             llb_Week1Nav = new LinkLabel();
@@ -125,6 +129,9 @@
             // 
             pn_Body.AutoScroll = true;
             pn_Body.BackColor = Color.FromArgb(247, 243, 238);
+            pn_Body.Controls.Add(btnWeek4Form);
+            pn_Body.Controls.Add(rtb_Week4Notes);
+            pn_Body.Controls.Add(lb_Week4Heading);
             pn_Body.Controls.Add(lb_CraftedItem);
             pn_Body.Controls.Add(btn_Craft);
             pn_Body.Controls.Add(lb_StoneAmount);
@@ -174,6 +181,40 @@
             pn_Body.Name = "pn_Body";
             pn_Body.Size = new Size(1359, 1020);
             pn_Body.TabIndex = 3;
+            // 
+            // btnWeek4Form
+            // 
+            btnWeek4Form.BackColor = Color.DarkOrange;
+            btnWeek4Form.ForeColor = Color.Azure;
+            btnWeek4Form.Location = new Point(431, 3843);
+            btnWeek4Form.Name = "btnWeek4Form";
+            btnWeek4Form.Size = new Size(357, 58);
+            btnWeek4Form.TabIndex = 46;
+            btnWeek4Form.Text = "GO TO NEW FORM";
+            btnWeek4Form.UseVisualStyleBackColor = false;
+            btnWeek4Form.Click += btnWeek4Form_Click;
+            // 
+            // rtb_Week4Notes
+            // 
+            rtb_Week4Notes.BackColor = Color.FromArgb(247, 243, 238);
+            rtb_Week4Notes.Font = new Font("Freestyle Script", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            rtb_Week4Notes.Location = new Point(106, 3609);
+            rtb_Week4Notes.Name = "rtb_Week4Notes";
+            rtb_Week4Notes.ReadOnly = true;
+            rtb_Week4Notes.Size = new Size(1077, 202);
+            rtb_Week4Notes.TabIndex = 45;
+            rtb_Week4Notes.Text = resources.GetString("rtb_Week4Notes.Text");
+            // 
+            // lb_Week4Heading
+            // 
+            lb_Week4Heading.AutoSize = true;
+            lb_Week4Heading.Font = new Font("Freestyle Script", 15.9000006F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lb_Week4Heading.ForeColor = Color.FromArgb(217, 122, 122);
+            lb_Week4Heading.Location = new Point(106, 3514);
+            lb_Week4Heading.Name = "lb_Week4Heading";
+            lb_Week4Heading.Size = new Size(144, 64);
+            lb_Week4Heading.TabIndex = 44;
+            lb_Week4Heading.Text = "Week 4";
             // 
             // lb_CraftedItem
             // 
@@ -619,6 +660,7 @@
             // pn_Navigation
             // 
             pn_Navigation.BackColor = Color.FromArgb(199, 184, 166);
+            pn_Navigation.Controls.Add(llb_Week4Nav);
             pn_Navigation.Controls.Add(llb_Week3Nav);
             pn_Navigation.Controls.Add(llb_Week2Nav);
             pn_Navigation.Controls.Add(llb_Week1Nav);
@@ -627,6 +669,19 @@
             pn_Navigation.Name = "pn_Navigation";
             pn_Navigation.Size = new Size(429, 1017);
             pn_Navigation.TabIndex = 4;
+            // 
+            // llb_Week4Nav
+            // 
+            llb_Week4Nav.ActiveLinkColor = Color.FromArgb(79, 111, 163);
+            llb_Week4Nav.AutoSize = true;
+            llb_Week4Nav.Font = new Font("Freestyle Script", 15.9000006F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            llb_Week4Nav.LinkColor = Color.FromArgb(106, 143, 191);
+            llb_Week4Nav.Location = new Point(65, 364);
+            llb_Week4Nav.Name = "llb_Week4Nav";
+            llb_Week4Nav.Size = new Size(144, 64);
+            llb_Week4Nav.TabIndex = 4;
+            llb_Week4Nav.TabStop = true;
+            llb_Week4Nav.Text = "Week 4";
             // 
             // llb_Week3Nav
             // 
@@ -753,5 +808,9 @@
         private Label lb_StoneAmount;
         private Label lb_WoodAmount;
         private Label lb_CraftedItem;
+        private LinkLabel llb_Week4Nav;
+        private Label lb_Week4Heading;
+        private RichTextBox rtb_Week4Notes;
+        private Button btnWeek4Form;
     }
 }

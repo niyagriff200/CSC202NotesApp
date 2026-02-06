@@ -117,27 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="rtb_Week1Notes.Text" xml:space="preserve">
-    <value>In Week 1 of CSC202, I learned how to add GUI elements to Winforms. For instance, this block of text is inside of a Textbox, a RichTextbox to be specific. It's currently set to read-only. I'll place another one where read-only is set to false.</value>
-  </data>
-  <data name="rtb_Week4Notes.Text" xml:space="preserve">
-    <value>This week in CSC202 we learned about exceptions, loops, and how to navigate to new forms. Below you will find a single button that will take you to a new form, where you can play a mini game and simulate a real-time error log. In the game you have to guess the card drawn. This will use functions and loops. Have fun!</value>
-  </data>
-  <data name="rtb_Week3Notes.Text" xml:space="preserve">
-    <value>This week in CSC202 we learned about functions. Below I will create a small crafting simulation. There will be two buttons, where you can add stone and wood into your "inventory". Then in a drop down menu you can see everything you're able to "craft". Select what you want to craft then, click the craft button.</value>
-  </data>
-  <data name="rtb_Week2Notes3.Text" xml:space="preserve">
-    <value>You may have noticed that there are no decimal points can be used without it breaking. And that it only gives whole numbers. That's because I used integers, which can only cary whole numbers. In this last section. I will do doubles instead. This allows for more precision in what you're calculating.</value>
-  </data>
-  <data name="rtb_Week2Notes2.Text" xml:space="preserve">
-    <value>Cool, right? There's nothing there preventing you from inputting numbers with it, however, it doesn't quite work if you're trying to calculate the sum of the numbers. That's because I'm using strings for that portion. In the next portion you'll only be permitted to use number. Try dividing 2 numbers below. You won't be able to place words inside.</value>
-  </data>
-  <data name="rtb_Week2Notes.Text" xml:space="preserve">
-    <value>In the 2nd week of CSC202 we learned about variables and conditionals. And how we will use those to add functionalbility to our forms. Let's start with the two textboxes below. One will be named txt_word1, the other will be named txt_word2. Go ahead and place a word in each box. Click the combine button when you've done that.</value>
-  </data>
-  <data name="rtb_PictureBoxNote.Text" xml:space="preserve">
-    <value>I added this picture of apples using the PictureBox. I set the size mode to Zoom so that it scales the image nicely. 
-
-By the way, I created this image in Blender, after following a tutorial by CGBoost.</value>
-  </data>
 </root>
