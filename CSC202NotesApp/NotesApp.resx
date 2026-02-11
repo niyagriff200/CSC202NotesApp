@@ -120,6 +120,9 @@
   <data name="rtb_Week1Notes.Text" xml:space="preserve">
     <value>In Week 1 of CSC202, I learned how to add GUI elements to Winforms. For instance, this block of text is inside of a Textbox, a RichTextbox to be specific. It's currently set to read-only. I'll place another one where read-only is set to false.</value>
   </data>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>This week in CSC202, we learned about arrays. Below you will see these arrays in action. You will be able to learn about different characters I randomly created. Click the next button, to see the next character.</value>
+  </data>
   <data name="rtb_Week4Notes.Text" xml:space="preserve">
     <value>This week in CSC202 we learned about exceptions, loops, and how to navigate to new forms. Below you will find a single button that will take you to a new form, where you can play a mini game and simulate a real-time error log. In the game you have to guess the card drawn. This will use functions and loops. Have fun!</value>
   </data>

@@ -33,6 +33,11 @@
             lb_Week1Heading = new Label();
             rtb_Week1Notes = new RichTextBox();
             pn_Body = new Panel();
+            lbCharacterName = new Label();
+            btnNext = new Button();
+            btnPrevious = new Button();
+            lb_Week5Heading = new Label();
+            richTextBox1 = new RichTextBox();
             btnWeek4Form = new Button();
             rtb_Week4Notes = new RichTextBox();
             lb_Week4Heading = new Label();
@@ -84,6 +89,8 @@
             llb_Week2Nav = new LinkLabel();
             llb_Week1Nav = new LinkLabel();
             lb_NavTitle = new Label();
+            lbCharacterLevel = new Label();
+            lbCharacterInfo = new Label();
             pn_Body.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -129,6 +136,13 @@
             // 
             pn_Body.AutoScroll = true;
             pn_Body.BackColor = Color.FromArgb(247, 243, 238);
+            pn_Body.Controls.Add(lbCharacterInfo);
+            pn_Body.Controls.Add(lbCharacterLevel);
+            pn_Body.Controls.Add(lbCharacterName);
+            pn_Body.Controls.Add(btnNext);
+            pn_Body.Controls.Add(btnPrevious);
+            pn_Body.Controls.Add(lb_Week5Heading);
+            pn_Body.Controls.Add(richTextBox1);
             pn_Body.Controls.Add(btnWeek4Form);
             pn_Body.Controls.Add(rtb_Week4Notes);
             pn_Body.Controls.Add(lb_Week4Heading);
@@ -181,6 +195,55 @@
             pn_Body.Name = "pn_Body";
             pn_Body.Size = new Size(1359, 1020);
             pn_Body.TabIndex = 3;
+            // 
+            // lbCharacterName
+            // 
+            lbCharacterName.AutoSize = true;
+            lbCharacterName.Location = new Point(402, 4429);
+            lbCharacterName.Name = "lbCharacterName";
+            lbCharacterName.Size = new Size(223, 41);
+            lbCharacterName.TabIndex = 51;
+            lbCharacterName.Text = "CharacterName";
+            // 
+            // btnNext
+            // 
+            btnNext.Location = new Point(855, 4531);
+            btnNext.Name = "btnNext";
+            btnNext.Size = new Size(188, 58);
+            btnNext.TabIndex = 50;
+            btnNext.Text = "Next";
+            btnNext.UseVisualStyleBackColor = true;
+            // 
+            // btnPrevious
+            // 
+            btnPrevious.Location = new Point(178, 4531);
+            btnPrevious.Name = "btnPrevious";
+            btnPrevious.Size = new Size(188, 58);
+            btnPrevious.TabIndex = 49;
+            btnPrevious.Text = "Previous";
+            btnPrevious.UseVisualStyleBackColor = true;
+            // 
+            // lb_Week5Heading
+            // 
+            lb_Week5Heading.AutoSize = true;
+            lb_Week5Heading.Font = new Font("Freestyle Script", 15.9000006F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lb_Week5Heading.ForeColor = Color.FromArgb(217, 122, 122);
+            lb_Week5Heading.Location = new Point(106, 4025);
+            lb_Week5Heading.Name = "lb_Week5Heading";
+            lb_Week5Heading.Size = new Size(145, 64);
+            lb_Week5Heading.TabIndex = 48;
+            lb_Week5Heading.Text = "Week 5";
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.BackColor = Color.FromArgb(247, 243, 238);
+            richTextBox1.Font = new Font("Freestyle Script", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            richTextBox1.Location = new Point(94, 4144);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.ReadOnly = true;
+            richTextBox1.Size = new Size(1089, 162);
+            richTextBox1.TabIndex = 47;
+            richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // btnWeek4Form
             // 
@@ -737,6 +800,24 @@
             lb_NavTitle.TabIndex = 0;
             lb_NavTitle.Text = "Weeks";
             // 
+            // lbCharacterLevel
+            // 
+            lbCharacterLevel.AutoSize = true;
+            lbCharacterLevel.Location = new Point(663, 4429);
+            lbCharacterLevel.Name = "lbCharacterLevel";
+            lbCharacterLevel.Size = new Size(211, 41);
+            lbCharacterLevel.TabIndex = 52;
+            lbCharacterLevel.Text = "CharacterLevel";
+            // 
+            // lbCharacterInfo
+            // 
+            lbCharacterInfo.AutoSize = true;
+            lbCharacterInfo.Location = new Point(533, 4520);
+            lbCharacterInfo.Name = "lbCharacterInfo";
+            lbCharacterInfo.Size = new Size(196, 41);
+            lbCharacterInfo.TabIndex = 53;
+            lbCharacterInfo.Text = "CharacterInfo";
+            // 
             // NotesApp
             // 
             AutoScaleDimensions = new SizeF(17F, 41F);
@@ -812,5 +893,12 @@
         private Label lb_Week4Heading;
         private RichTextBox rtb_Week4Notes;
         private Button btnWeek4Form;
+        private Label lb_Week5Heading;
+        private RichTextBox richTextBox1;
+        private Button btnPrevious;
+        private Button btnNext;
+        private Label lbCharacterName;
+        private Label lbCharacterInfo;
+        private Label lbCharacterLevel;
     }
 }

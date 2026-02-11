@@ -1,3 +1,5 @@
+using System;
+
 namespace CSC202NotesApp
 {
     public partial class NotesApp : Form
@@ -22,9 +24,24 @@ namespace CSC202NotesApp
             Sword
 
         }
+
+        //This 2 dimesnsional array stores all the character's names and their info - there are only 5 items in this array
+        string[,] characterInfo = new string[5, 2]
+        {
+            { "Lemon", "Lemon and his twin Lime are very sour." },
+            { "Lime", "Lime and his twin Lemon are very sour." },
+            { "Orange", "Orange, enough said." },
+            { "Berry", "Berry is from a long line of fruit, you might recognize his parents, blue and straw." },
+            { "Banana", "Peel Banana's layer and he becomes bananas." }
+        };
+
+        //This array stores all the character's levels - there are only 5 items in this array
+        int[] characterLevels = new int[5] { 12, 10, 5, 8, 7 };
+
         public NotesApp()
         {
             InitializeComponent();
+            
         }
 
         private void btn_Combine_Click(object sender, EventArgs e)
@@ -280,6 +297,11 @@ namespace CSC202NotesApp
             week4.Show();
 
             this.Hide();
+        }
+
+        private void DisplayCharacter()
+        {
+
         }
     }
 }
