@@ -38,10 +38,16 @@ namespace CSC202NotesApp
         //This array stores all the character's levels - there are only 5 items in this array
         int[] characterLevels = new int[5] { 12, 10, 5, 8, 7 };
 
+        // This variable keeps track of which character is currently being displayed.
+        // When the user clicks Next or Previous, this number changes so the program knows 
+        // which character's name, description, and level to show.
+        int characterIndex = 0;
+
         public NotesApp()
         {
             InitializeComponent();
-            
+            DisplayCharacter();
+
         }
 
         private void btn_Combine_Click(object sender, EventArgs e)
@@ -301,7 +307,51 @@ namespace CSC202NotesApp
 
         private void DisplayCharacter()
         {
+            try
+            {
+                // display the character name and info
+                lbCharacterName.Text = $"Name: {characterInfo[characterIndex, 0]}";
+                rtbCharacterInfo.Text = characterInfo[characterIndex, 1];
 
+                //display the character level
+                lbCharacterLevel.Text = $"Level: {characterLevels[characterIndex]}";
+            }
+            catch (IndexOutOfRangeException)
+            {
+                //reset character index to 0 if index is out of range
+                characterIndex = 0;
+                DisplayCharacter();
+            }
         }
+
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            // Move to the next character
+            characterIndex++; //Add 1 to the characterIndex
+
+            // If we go past the last character, wrap back to 0
+            if (characterIndex >= characterInfo.GetLength(0))
+            {
+                characterIndex = 0;
+            }
+
+            DisplayCharacter();
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            // Move to the previous character
+            characterIndex--; //Subtract 1 from the characterIndex
+
+            // If we go before the first character, wrap to the last one
+            if (characterIndex < 0)
+            {
+                characterIndex = characterInfo.GetLength(0) - 1;
+            }
+
+            DisplayCharacter();
+        }
+
     }
 }

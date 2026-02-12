@@ -33,6 +33,8 @@
             lb_Week1Heading = new Label();
             rtb_Week1Notes = new RichTextBox();
             pn_Body = new Panel();
+            rtbCharacterInfo = new RichTextBox();
+            lbCharacterLevel = new Label();
             lbCharacterName = new Label();
             btnNext = new Button();
             btnPrevious = new Button();
@@ -89,8 +91,6 @@
             llb_Week2Nav = new LinkLabel();
             llb_Week1Nav = new LinkLabel();
             lb_NavTitle = new Label();
-            lbCharacterLevel = new Label();
-            lbCharacterInfo = new Label();
             pn_Body.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -136,7 +136,7 @@
             // 
             pn_Body.AutoScroll = true;
             pn_Body.BackColor = Color.FromArgb(247, 243, 238);
-            pn_Body.Controls.Add(lbCharacterInfo);
+            pn_Body.Controls.Add(rtbCharacterInfo);
             pn_Body.Controls.Add(lbCharacterLevel);
             pn_Body.Controls.Add(lbCharacterName);
             pn_Body.Controls.Add(btnNext);
@@ -196,10 +196,29 @@
             pn_Body.Size = new Size(1359, 1020);
             pn_Body.TabIndex = 3;
             // 
+            // rtbCharacterInfo
+            // 
+            rtbCharacterInfo.BackColor = Color.FromArgb(247, 243, 238);
+            rtbCharacterInfo.Location = new Point(457, 4473);
+            rtbCharacterInfo.Name = "rtbCharacterInfo";
+            rtbCharacterInfo.ReadOnly = true;
+            rtbCharacterInfo.Size = new Size(358, 240);
+            rtbCharacterInfo.TabIndex = 53;
+            rtbCharacterInfo.Text = "";
+            // 
+            // lbCharacterLevel
+            // 
+            lbCharacterLevel.AutoSize = true;
+            lbCharacterLevel.Location = new Point(660, 4401);
+            lbCharacterLevel.Name = "lbCharacterLevel";
+            lbCharacterLevel.Size = new Size(211, 41);
+            lbCharacterLevel.TabIndex = 52;
+            lbCharacterLevel.Text = "CharacterLevel";
+            // 
             // lbCharacterName
             // 
             lbCharacterName.AutoSize = true;
-            lbCharacterName.Location = new Point(402, 4429);
+            lbCharacterName.Location = new Point(407, 4401);
             lbCharacterName.Name = "lbCharacterName";
             lbCharacterName.Size = new Size(223, 41);
             lbCharacterName.TabIndex = 51;
@@ -207,21 +226,23 @@
             // 
             // btnNext
             // 
-            btnNext.Location = new Point(855, 4531);
+            btnNext.Location = new Point(821, 4655);
             btnNext.Name = "btnNext";
             btnNext.Size = new Size(188, 58);
             btnNext.TabIndex = 50;
             btnNext.Text = "Next";
             btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnNext_Click;
             // 
             // btnPrevious
             // 
-            btnPrevious.Location = new Point(178, 4531);
+            btnPrevious.Location = new Point(263, 4655);
             btnPrevious.Name = "btnPrevious";
             btnPrevious.Size = new Size(188, 58);
             btnPrevious.TabIndex = 49;
             btnPrevious.Text = "Previous";
             btnPrevious.UseVisualStyleBackColor = true;
+            btnPrevious.Click += btnPrevious_Click;
             // 
             // lb_Week5Heading
             // 
@@ -800,24 +821,6 @@
             lb_NavTitle.TabIndex = 0;
             lb_NavTitle.Text = "Weeks";
             // 
-            // lbCharacterLevel
-            // 
-            lbCharacterLevel.AutoSize = true;
-            lbCharacterLevel.Location = new Point(663, 4429);
-            lbCharacterLevel.Name = "lbCharacterLevel";
-            lbCharacterLevel.Size = new Size(211, 41);
-            lbCharacterLevel.TabIndex = 52;
-            lbCharacterLevel.Text = "CharacterLevel";
-            // 
-            // lbCharacterInfo
-            // 
-            lbCharacterInfo.AutoSize = true;
-            lbCharacterInfo.Location = new Point(533, 4520);
-            lbCharacterInfo.Name = "lbCharacterInfo";
-            lbCharacterInfo.Size = new Size(196, 41);
-            lbCharacterInfo.TabIndex = 53;
-            lbCharacterInfo.Text = "CharacterInfo";
-            // 
             // NotesApp
             // 
             AutoScaleDimensions = new SizeF(17F, 41F);
@@ -898,7 +901,7 @@
         private Button btnPrevious;
         private Button btnNext;
         private Label lbCharacterName;
-        private Label lbCharacterInfo;
         private Label lbCharacterLevel;
+        private RichTextBox rtbCharacterInfo;
     }
 }
