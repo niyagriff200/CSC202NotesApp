@@ -120,7 +120,10 @@
   <data name="rtb_Week1Notes.Text" xml:space="preserve">
     <value>In Week 1 of CSC202, I learned how to add GUI elements to Winforms. For instance, this block of text is inside of a Textbox, a RichTextbox to be specific. It's currently set to read-only. I'll place another one where read-only is set to false.</value>
   </data>
-  <data name="richTextBox1.Text" xml:space="preserve">
+  <data name="rtbWeek6Notes.Text" xml:space="preserve">
+    <value>This week in CSC202, we learned how to read and write files in C#. Below you will be able to add your own character, then it will be added to the character file. You'll be able to load the characters their availability.</value>
+  </data>
+  <data name="rtbWeek5Notes.Text" xml:space="preserve">
     <value>This week in CSC202, we learned about arrays. Below you will see these arrays in action. You will be able to learn about different characters I randomly created. Click the next button, to see the next character.</value>
   </data>
   <data name="rtb_Week4Notes.Text" xml:space="preserve">

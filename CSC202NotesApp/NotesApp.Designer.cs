@@ -33,13 +33,22 @@
             lb_Week1Heading = new Label();
             rtb_Week1Notes = new RichTextBox();
             pn_Body = new Panel();
+            lblShowMessage = new Label();
+            btnToggleAvailability = new Button();
+            btnSave = new Button();
+            btnLoad = new Button();
+            btnAdd = new Button();
+            lstbCharacterList = new ListBox();
+            txtWriteCharacter = new TextBox();
+            rtbWeek6Notes = new RichTextBox();
+            lb_Week6Heading = new Label();
             rtbCharacterInfo = new RichTextBox();
             lbCharacterLevel = new Label();
             lbCharacterName = new Label();
             btnNext = new Button();
             btnPrevious = new Button();
             lb_Week5Heading = new Label();
-            richTextBox1 = new RichTextBox();
+            rtbWeek5Notes = new RichTextBox();
             btnWeek4Form = new Button();
             rtb_Week4Notes = new RichTextBox();
             lb_Week4Heading = new Label();
@@ -136,13 +145,22 @@
             // 
             pn_Body.AutoScroll = true;
             pn_Body.BackColor = Color.FromArgb(247, 243, 238);
+            pn_Body.Controls.Add(lblShowMessage);
+            pn_Body.Controls.Add(btnToggleAvailability);
+            pn_Body.Controls.Add(btnSave);
+            pn_Body.Controls.Add(btnLoad);
+            pn_Body.Controls.Add(btnAdd);
+            pn_Body.Controls.Add(lstbCharacterList);
+            pn_Body.Controls.Add(txtWriteCharacter);
+            pn_Body.Controls.Add(rtbWeek6Notes);
+            pn_Body.Controls.Add(lb_Week6Heading);
             pn_Body.Controls.Add(rtbCharacterInfo);
             pn_Body.Controls.Add(lbCharacterLevel);
             pn_Body.Controls.Add(lbCharacterName);
             pn_Body.Controls.Add(btnNext);
             pn_Body.Controls.Add(btnPrevious);
             pn_Body.Controls.Add(lb_Week5Heading);
-            pn_Body.Controls.Add(richTextBox1);
+            pn_Body.Controls.Add(rtbWeek5Notes);
             pn_Body.Controls.Add(btnWeek4Form);
             pn_Body.Controls.Add(rtb_Week4Notes);
             pn_Body.Controls.Add(lb_Week4Heading);
@@ -195,6 +213,91 @@
             pn_Body.Name = "pn_Body";
             pn_Body.Size = new Size(1359, 1020);
             pn_Body.TabIndex = 3;
+            // 
+            // lblShowMessage
+            // 
+            lblShowMessage.AutoSize = true;
+            lblShowMessage.Location = new Point(1010, 5320);
+            lblShowMessage.Name = "lblShowMessage";
+            lblShowMessage.Size = new Size(0, 41);
+            lblShowMessage.TabIndex = 63;
+            // 
+            // btnToggleAvailability
+            // 
+            btnToggleAvailability.Location = new Point(679, 5311);
+            btnToggleAvailability.Name = "btnToggleAvailability";
+            btnToggleAvailability.Size = new Size(268, 58);
+            btnToggleAvailability.TabIndex = 62;
+            btnToggleAvailability.Text = "Toggle Availability";
+            btnToggleAvailability.UseVisualStyleBackColor = true;
+            btnToggleAvailability.Click += btnToggleAvailability_Click;
+            // 
+            // btnSave
+            // 
+            btnSave.Location = new Point(679, 5380);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(268, 58);
+            btnSave.TabIndex = 61;
+            btnSave.Text = "Save Characters";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
+            // 
+            // btnLoad
+            // 
+            btnLoad.Location = new Point(679, 5444);
+            btnLoad.Name = "btnLoad";
+            btnLoad.Size = new Size(268, 58);
+            btnLoad.TabIndex = 60;
+            btnLoad.Text = "Load Characters";
+            btnLoad.UseVisualStyleBackColor = true;
+            btnLoad.Click += btnLoad_Click;
+            // 
+            // btnAdd
+            // 
+            btnAdd.Location = new Point(679, 5225);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(268, 58);
+            btnAdd.TabIndex = 59;
+            btnAdd.Text = "Add Character";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
+            // 
+            // lstbCharacterList
+            // 
+            lstbCharacterList.FormattingEnabled = true;
+            lstbCharacterList.Location = new Point(94, 5293);
+            lstbCharacterList.Name = "lstbCharacterList";
+            lstbCharacterList.Size = new Size(558, 209);
+            lstbCharacterList.TabIndex = 58;
+            // 
+            // txtWriteCharacter
+            // 
+            txtWriteCharacter.Location = new Point(94, 5225);
+            txtWriteCharacter.Name = "txtWriteCharacter";
+            txtWriteCharacter.Size = new Size(558, 47);
+            txtWriteCharacter.TabIndex = 56;
+            // 
+            // rtbWeek6Notes
+            // 
+            rtbWeek6Notes.BackColor = Color.FromArgb(247, 243, 238);
+            rtbWeek6Notes.Font = new Font("Freestyle Script", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            rtbWeek6Notes.Location = new Point(94, 5054);
+            rtbWeek6Notes.Name = "rtbWeek6Notes";
+            rtbWeek6Notes.ReadOnly = true;
+            rtbWeek6Notes.Size = new Size(1146, 156);
+            rtbWeek6Notes.TabIndex = 55;
+            rtbWeek6Notes.Text = resources.GetString("rtbWeek6Notes.Text");
+            // 
+            // lb_Week6Heading
+            // 
+            lb_Week6Heading.AutoSize = true;
+            lb_Week6Heading.Font = new Font("Freestyle Script", 15.9000006F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lb_Week6Heading.ForeColor = Color.FromArgb(217, 122, 122);
+            lb_Week6Heading.Location = new Point(106, 4953);
+            lb_Week6Heading.Name = "lb_Week6Heading";
+            lb_Week6Heading.Size = new Size(145, 64);
+            lb_Week6Heading.TabIndex = 54;
+            lb_Week6Heading.Text = "Week 6";
             // 
             // rtbCharacterInfo
             // 
@@ -255,16 +358,16 @@
             lb_Week5Heading.TabIndex = 48;
             lb_Week5Heading.Text = "Week 5";
             // 
-            // richTextBox1
+            // rtbWeek5Notes
             // 
-            richTextBox1.BackColor = Color.FromArgb(247, 243, 238);
-            richTextBox1.Font = new Font("Freestyle Script", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            richTextBox1.Location = new Point(94, 4144);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.ReadOnly = true;
-            richTextBox1.Size = new Size(1089, 162);
-            richTextBox1.TabIndex = 47;
-            richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            rtbWeek5Notes.BackColor = Color.FromArgb(247, 243, 238);
+            rtbWeek5Notes.Font = new Font("Freestyle Script", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            rtbWeek5Notes.Location = new Point(94, 4144);
+            rtbWeek5Notes.Name = "rtbWeek5Notes";
+            rtbWeek5Notes.ReadOnly = true;
+            rtbWeek5Notes.Size = new Size(1089, 162);
+            rtbWeek5Notes.TabIndex = 47;
+            rtbWeek5Notes.Text = resources.GetString("rtbWeek5Notes.Text");
             // 
             // btnWeek4Form
             // 
@@ -897,11 +1000,21 @@
         private RichTextBox rtb_Week4Notes;
         private Button btnWeek4Form;
         private Label lb_Week5Heading;
-        private RichTextBox richTextBox1;
+        private RichTextBox rtbWeek5Notes;
         private Button btnPrevious;
         private Button btnNext;
         private Label lbCharacterName;
         private Label lbCharacterLevel;
         private RichTextBox rtbCharacterInfo;
+        private Label lb_Week6Heading;
+        private RichTextBox rtbWeek6Notes;
+        private TextBox txtWrite2;
+        private TextBox txtWriteCharacter;
+        private ListBox lstbCharacterList;
+        private Button btnAdd;
+        private Button btnSave;
+        private Button btnLoad;
+        private Button btnToggleAvailability;
+        private Label lblShowMessage;
     }
 }

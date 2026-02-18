@@ -43,6 +43,17 @@ namespace CSC202NotesApp
         // which character's name, description, and level to show.
         int characterIndex = 0;
 
+
+
+        // Stores the file name for character names.
+        string characterFile = "characters.txt";
+
+        // Stores the file name for availability values.
+        string availabilityFile = "availability.txt";
+
+
+
+
         public NotesApp()
         {
             InitializeComponent();
@@ -352,6 +363,124 @@ namespace CSC202NotesApp
 
             DisplayCharacter();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            // Gets the text from the character textbox.
+            string name = txtWriteCharacter.Text;
+
+            // Checks if the textbox is empty.
+            if (name == "")
+            {
+                // Displays a message in the label.
+                lblShowMessage.Text = "Enter a character name.";
+                return;
+            }
+
+            // Adds the character with default availability to the listbox.
+            lstbCharacterList.Items.Add(name + " - Available");
+
+            // Clears the textbox.
+            txtWriteCharacter.Text = "";
+
+            // Displays a confirmation message.
+            lblShowMessage.Text = "Character added.";
+        }
+
+
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            // Clears the character file.
+            File.WriteAllText(characterFile, "");
+
+            // Clears the availability file.
+            File.WriteAllText(availabilityFile, "");
+
+            // Loops through each item in the listbox.
+            foreach (string item in lstbCharacterList.Items)
+            {
+                // Splits the item into name and availability.
+                string[] parts = item.Split('-');
+
+                // Stores the name.
+                string name = parts[0].Trim();
+
+                // Stores the availability.
+                string availability = parts[1].Trim();
+
+                // Writes the name to the character file.
+                File.AppendAllText(characterFile, name + "\n");
+
+                // Writes the availability to the availability file.
+                File.AppendAllText(availabilityFile, availability + "\n");
+            }
+
+            // Displays a confirmation message.
+            lblShowMessage.Text = "Files saved.";
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            // Clears the listbox.
+            lstbCharacterList.Items.Clear();
+
+            // Reads all names from the character file.
+            string[] names = File.ReadAllLines(characterFile);
+
+            // Reads all availability values from the availability file.
+            string[] availability = File.ReadAllLines(availabilityFile);
+
+            // Loops through both arrays.
+            for (int i = 0; i < names.Length; i++)
+            {
+                // Adds the combined name and availability to the listbox.
+                lstbCharacterList.Items.Add(names[i] + " - " + availability[i]);
+            }
+
+            // Displays a confirmation message.
+            lblShowMessage.Text = "Files loaded.";
+        }
+
+        private void btnToggleAvailability_Click(object sender, EventArgs e)
+        {
+            // Checks if an item is selected.
+            if (lstbCharacterList.SelectedIndex == -1)
+            {
+                // Displays a message if nothing is selected.
+                lblShowMessage.Text = "Select a character.";
+                return;
+            }
+
+            // Gets the selected item text.
+            string selected = lstbCharacterList.SelectedItem.ToString();
+
+            // Splits the item into name and availability.
+            string[] parts = selected.Split('-');
+
+            // Stores the name.
+            string name = parts[0].Trim();
+
+            // Stores the availability.
+            string availability = parts[1].Trim();
+
+            // Toggles the availability value.
+            if (availability == "Available")
+            {
+                availability = "Not Available";
+            }
+            else
+            {
+                availability = "Available";
+            }
+
+            // Updates the selected item in the listbox.
+            lstbCharacterList.Items[lstbCharacterList.SelectedIndex] = name + " - " + availability;
+
+            // Displays a confirmation message.
+            lblShowMessage.Text = "Availability updated.";
+        }
+
 
     }
 }
